@@ -1,0 +1,15 @@
+<form class="flex gap-5" (ngSubmit)="saveCharacter()">
+  <input
+  class="border border-black ml-3"
+  name="name"
+  type="text"
+  [(ngModel)]="character.name"
+  placeholder="Nombre">
+  <input
+  class="border border-black ml-3"
+  name="power"
+   type="number"
+   [(ngModel)]="character.power"
+    placeholder="Poder">
+  <button class="border border-black p-1 bg-blue-300 w-[100px] rounded-lg" type="submit">Add</button>
+</form>

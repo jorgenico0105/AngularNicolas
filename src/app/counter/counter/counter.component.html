@@ -1,0 +1,13 @@
+<h1>Hola como estas</h1>
+<p>Contador:{{counter}}</p>
+<div class="flex gap-3">
+  <button class="bg-blue-300 p-2 border-2 border-black"
+  (click)="increaseby(1)"
+  >+1</button>
+  <button (click)="reset()">Reset</button>
+  <button
+  class="bg-red-300 p-2 border-2 border-black "
+  (click)="increaseby(-1)"
+  >-1</button>
+</div>
+

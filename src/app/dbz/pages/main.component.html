@@ -1,0 +1,15 @@
+<h1 class="text-center font-bold text-3xl mt-5">Hola dragon bal</h1>
+<hr>
+<div class="w-[1024px] m-auto flex justify-between mt-[20px]">
+  <div>
+    <app-dbz-listado
+    [characterList]="dbzService.characters"
+    (emitId)="dbzService.deleteCharacter($event)"
+    ></app-dbz-listado>
+
+  </div>
+  <div class="justify-start ">
+    <h4 class="font-black text-4xl mb-4">Listado:</h4>
+    <app-form (onNewCharacter)="dbzService.addCharacter($event)"></app-form>
+  </div>
+</div>

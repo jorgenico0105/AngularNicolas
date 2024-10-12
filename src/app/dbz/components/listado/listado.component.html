@@ -1,0 +1,22 @@
+<h4 class="font-black text-4xl mb-4">Listado:</h4>
+<ul>
+  <p *ngIf="characterList.length===0">No hay Personaes para listar</p>
+  <li *ngFor="let character of characterList;
+   let i=index;
+   let isFirs=first;
+   let isLast=last
+   ">
+
+   <div class="bg-green-300 border border-black rounded-xl mt-3 p-2 flex items-center gap-3
+   justify-between" [ngClass]="{'hover:bg-red-300': isLast,
+   'hover:bg-blue-400':isFirs,
+   }">
+    <span class="text-green-400">{{i+1}}</span>
+    {{character.name}}- <span class="font-black">Poder :</span>
+    {{character.power}}
+    <!-- <span>Es el primero:{{isFirs}} </span>
+    <span >Es el ultimo : {{isLast  }}</span> -->
+    <button class="bg-red-500 border p-2 border-black rounded-xl hover:bg-red-700"  (click)="onDeleteCharacter(i)"> X </button>
+  </div>
+  </li>
+</ul>
